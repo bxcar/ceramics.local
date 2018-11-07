@@ -28,7 +28,7 @@
 
 <div class="cart-action">
     <div class="page-content">
-        <a href="cart.html" id="cart-btn" class="btn btn-rounded">
+        <a href="/cart" id="cart-btn" class="btn btn-rounded">
             <span class="icon icon-cart"></span><span class="text"> Корзина</span>
             <span id="cart-counter" class="counter"></span>
         </a>

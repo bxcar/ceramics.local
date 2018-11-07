@@ -1,0 +1,24 @@
+2018-11-07T16:28:05+00:00 CRITICAL Uncaught Error: Call to undefined function phpget_header() in C:\OpenServer\domains\ceramics.local\wp-content\themes\ceramics\single-product.php:1
+Stack trace:
+#0 C:\OpenServer\domains\ceramics.local\wp-includes\template-loader.php(74): include()
+#1 C:\OpenServer\domains\ceramics.local\wp-blog-header.php(19): require_once('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\ceramics.local\index.php(17): require('C:\\OpenServer\\d...')
+#3 {main}
+  thrown in C:\OpenServer\domains\ceramics.local\wp-content\themes\ceramics\single-product.php on line 1
+
+2018-11-07T20:17:13+00:00 CRITICAL Uncaught Error: Call to a member function get_gallery_attachment_ids() on string in C:\OpenServer\domains\ceramics.local\wp-content\themes\ceramics\single-product.php:11
+Stack trace:
+#0 C:\OpenServer\domains\ceramics.local\wp-includes\template-loader.php(74): include()
+#1 C:\OpenServer\domains\ceramics.local\wp-blog-header.php(19): require_once('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\ceramics.local\index.php(17): require('C:\\OpenServer\\d...')
+#3 {main}
+  thrown in C:\OpenServer\domains\ceramics.local\wp-content\themes\ceramics\single-product.php on line 11
+
+2018-11-07T20:18:09+00:00 CRITICAL Uncaught Error: Call to a member function get_gallery_image_ids() on string in C:\OpenServer\domains\ceramics.local\wp-content\themes\ceramics\single-product.php:11
+Stack trace:
+#0 C:\OpenServer\domains\ceramics.local\wp-includes\template-loader.php(74): include()
+#1 C:\OpenServer\domains\ceramics.local\wp-blog-header.php(19): require_once('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\ceramics.local\index.php(17): require('C:\\OpenServer\\d...')
+#3 {main}
+  thrown in C:\OpenServer\domains\ceramics.local\wp-content\themes\ceramics\single-product.php on line 11
+
