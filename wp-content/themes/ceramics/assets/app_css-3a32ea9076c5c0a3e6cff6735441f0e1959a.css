@@ -3498,7 +3498,7 @@ body:not(.touch) .tiles-promo .item:hover .title {
 @media screen and (min-width: 1026px) and (orientation: landscape) {
   .tiles-cases .item {
     width: 350px;
-    margin-left: 35px;
+    margin-left: 30px;
     /*
     .media .tab-pages {
       width: r-value(tiles-cases, $orientation, images, medium, width);

@@ -19,8 +19,13 @@ get_header();
             <div class="swiper-box" data-swiper="yes" data-swiper-autoplay="5">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" style="background-image: url(<?= get_template_directory_uri(); ?>/_/files/featured/finezza_banners_4_2-8cf5abeb8662866fb6d3e249f52a6871-b6141665057c0e15d0b1e8d47a908afe-thumb-1120x400-crop.png)"><a href="catalog0dab.html?type=2"></a></div>
-                        <div class="swiper-slide" style="background-image: url(<?= get_template_directory_uri(); ?>/_/files/featured/finezza_banners_-8472eac34cea3f25b9579120c12d673b-34bca1d5b4c4dc5205a1c2b6972dcc44-thumb-1120x400-crop.png)"><a href="payment-and-shipping.html"></a></div>
+                        <?php if (get_field('slides')) {
+                            foreach (get_field('slides') as $item) { ?>
+                                <div class="swiper-slide" style="background-image: url(<?= $item['slide']; ?>)">
+                                    <a target="<?= $item['link']['target']; ?>" href="<?= $item['link']['url']; ?>"></a>
+                                </div>
+                            <?php }
+                        } ?>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -30,12 +35,13 @@ get_header();
             <div class="page-content">
 
                 <div class="main-text-content">
-                    <h1>Finezza ceramics</h1>
+                    <h1><?php the_field('title') ?></h1>
 
                     <div class="text">
                         <div class="rich-content">
-                            <p>Керамическая плитка Finezza ceramics производится на современном европейском оборудовании. Благодаря новейшим технологиям нам удалось добиться высокого качества плитки. Вся продукция изготавливается из белой глины и является ректифицированной. Плитку можно укладывать бесшовным способом.</p>
-                        </div>    </div>
+                            <p><?php the_field('desc') ?></p>
+                        </div>
+                    </div>
                 </div>
 
             </div>
