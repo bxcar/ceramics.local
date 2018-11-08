@@ -1,0 +1,29 @@
+.woocommerce table.cart td.actions .coupon,
+.cart-subtotal,
+.woocommerce-shipping-totals.shipping,
+.cart_totals > h2,
+.woocommerce-form-coupon-toggle,
+.wc_payment_methods.payment_methods.methods,
+.woocommerce-terms-and-conditions-wrapper,
+.woocommerce-order-overview__payment-method.method,
+.woocommerce-order-overview.woocommerce-thankyou-order-details.order_details + p,
+.woocommerce-order-details,
+.woocommerce-customer-details,
+.dialog-box.dialog-box-opened,
+.dialog {
+    display: none;
+}
+
+.dialog-box.dialog-box-opened {
+    display: none !important;
+}
+
+
+.woocommerce table.cart img {
+    max-height: 70px;
+    width: auto;
+}
+
+.form-row.place-order {
+    background: #fff;
+}

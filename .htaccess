@@ -10,3 +10,6 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
+
+Redirect 301 /shop /catalog
+Redirect 301 /shop__trashed /catalog

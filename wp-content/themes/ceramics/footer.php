@@ -14,8 +14,8 @@
     <div class="page-content">
         <div class="column-layout">
             <div class="column">
-                Тел. <a href="tel:+74950231515">+7 495 023 15 15</a><br/>
-                Почта: <a href="mailto:stroysklad1@mail.ru">stroysklad1@mail.ru</a><span class="action"><a href="javascript:void(0);" data-dialog="load" data-dialog-url="/feedback">Обратная связь</a></span>
+                Тел. <a style="color: black"><?php the_field('footer_phone', 'option')?></a><br/>
+                Почта: <a href="mailto:<?php the_field('footer_email', 'option')?>"><?php the_field('footer_email', 'option')?></a><span class="action"><a href="javascript:void(0);" data-dialog="load" data-dialog-url="/feedback">Обратная связь</a></span>
             </div>
             <div class="column">
                 <a href="http://proxima.agency/" class="developed-by">

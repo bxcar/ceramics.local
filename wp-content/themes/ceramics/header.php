@@ -36,20 +36,17 @@
 <header class="main">
     <div class="page-content">
         <div class="menu-btn" data-menu="yes" data-menu-menu-selector=".main-menu .items"></div>
-        <a href="index.html" class="logo"></a>
+        <a href="/" class="logo" style="background: url(<?php the_field('header_logo', 'option')?>);"></a>
         <nav class="main-menu">
-            <div class="items">
-                <!--
-               --><span class="item"><a href="catalog.html">Каталог</a></span><!--
-     --><!--
-       --><span class="item"><a href="shops.html">Адреса магазинов</a></span><!--
-     --><!--
-       --><span class="item"><a href="design-3d.html">Дизайн-проект в 3D</a></span><!--
-     --><!--
-       --><span class="item"><a href="payment-and-shipping.html">Оплата и доставка</a></span><!--
-     --><!--
-       --><span class="item"><a href="promo.html">Акции</a></span><!--
-     -->      </div>
+                <?php
+                echo str_replace(array('<li', '</li>', 'menu-item'), array('<span', '</span>', 'item'), wp_nav_menu(array(
+                        'echo' => false,
+                        'theme_location' => 'menu-1',
+                        'items_wrap' => '<div class="items">%3$s</div>',
+                        'container' => 'false'
+                    ))
+                );
+                ?>
         </nav>
     </div>
 </header>

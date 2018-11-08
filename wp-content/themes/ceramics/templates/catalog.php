@@ -9,14 +9,14 @@ get_header(); ?>
               <h1 class="page-title">Каталог</h1>
             <div class="page-content">
 
-  <div class="subnav subnav-tabs">
+  <!--<div class="subnav subnav-tabs">
     <a class="item active" href="catalog.html">Все типы плитки</a>
           <a class="item" href="catalogdcf7.html?type=5">Коллекции</a>
           <a class="item" href="catalog10b0.html?type=1">керамогранит</a>
           <a class="item" href="catalog3de9.html?type=6">керамогранит 60х120</a>
           <a class="item" href="catalog0dab.html?type=2">мозаика</a>
           <a class="item" href="catalog728f.html?type=4">Мелкоформатная плитка</a>
-      </div>
+      </div>-->
 
   <div class="tiles tiles-catalog">
       <?php
