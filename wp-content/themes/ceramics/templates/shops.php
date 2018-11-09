@@ -6,45 +6,31 @@ get_header(); ?>
   
   <div class="page">
     <div class="content">
-              <h1 class="page-title">Адреса магазинов</h1>
+              <h1 class="page-title"><?php the_title(); ?></h1>
             <div class="page-content">
 
   <div class="tiles tiles-shops">
-  <!--
-     --><div class="item">
-      <div class="media">
-        <a href="shops/11.html" class="image" style="background-image: url(<?= get_template_directory_uri(); ?>/_/files/shops/dexpo_sait122-a187170e7daac8f641075a44c0074b56-9189276eb77de547af155f332c5f9f58-thumb-328x160-crop.png)">&nbsp;</a>
-      </div>
-      <div class="props shop-info">
-        <div class="title"><a href="shops/11.html">Оптовые продажи / Офис</a></div>
-        <div class="subtitle">С 9.00 - 18.00 ПН-ПТ</div>
-        <div class="actions">
-          <a href="javascript:void(0);" data-map-trigger="55.68027056864813,37.5152146865075">На карте</a>
-        </div>
-        <div class="contacts">
-          <div><a href="mailto:stroysklad1@mail.ru">stroysklad1@mail.ru</a></div>
-          <div><a href="tel:+74950231515">+7 (495) 023-15-15</a></div>
-        </div>
-      </div>
-    </div><!--
---><!--
-     --><div class="item">
-      <div class="media">
-        <a href="shops/12.html" class="image" style="background-image: url(<?= get_template_directory_uri(); ?>/_/files/shops/magazin_kashirskiy_dvor-91775741f04ee37bf2f479d421fcf44e-fb605a48fb7af6e656d7ef23422767b5-thumb-328x160-crop.jpeg)">&nbsp;</a>
-      </div>
-      <div class="props shop-info">
-        <div class="title"><a href="shops/12.html">Розничные продажи / ТК «Каширский двор»</a></div>
-        <div class="subtitle">10.00 - 20.00 Ежедневно</div>
-        <div class="actions">
-          <a href="javascript:void(0);" data-map-trigger="55.66480405392872,37.632054517196615">На карте</a>
-        </div>
-        <div class="contacts">
-          <div><a href="mailto:kd@urbanyst.ru">kd@urbanyst.ru</a></div>
-          <div><a href="tel:+79166303807">+7 (916) 630-38-07</a></div>
-        </div>
-      </div>
-    </div><!--
--->  </div>
+      <?php if (get_field('shops')) {
+          foreach (get_field('shops') as $item) { ?>
+              <div class="item">
+                  <div class="media">
+                      <a target="<?= $item['link']['target'] ?>" href="<?= $item['link']['url'] ?>" class="image" style="background-image: url(<?= $item['img'] ?>)">&nbsp;</a>
+                  </div>
+                  <div class="props shop-info">
+                      <div class="title"><a target="<?= $item['link']['target'] ?>" href="<?= $item['link']['url'] ?>"><?= $item['title'] ?></a></div>
+                      <div class="subtitle"><?= $item['time'] ?></div>
+                      <div class="actions">
+                          <a href="javascript:void(0);" data-map-trigger="<?= $item['coords'] ?>">На карте</a>
+                      </div>
+                      <div class="contacts">
+                          <div><a href="mailto:stroysklad1@mail.ru"><?= $item['email'] ?></a></div>
+                          <div><a href="tel:+74950231515"><?= $item['phone'] ?></a></div>
+                      </div>
+                  </div>
+              </div>
+          <?php }
+      } ?>
+  </div>
 
   <section id="map">
     <h2>На карте</h2>

@@ -1,3 +1,13 @@
 wp-admin
 admin
 L@PTozFAHuQqDYj2wX
+
+
+bd
+webdev47_ceramic
+webdev47_ceramic
+Yu&34P)0co
+webdev47.mysql.tools
+
+define( 'WP_HOME', 'http://1280850.webdev47.web.hosting-test.net');
+define( 'WP_SITEURL', 'http://1280850.webdev47.web.hosting-test.net');
